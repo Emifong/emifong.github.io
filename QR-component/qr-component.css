@@ -1,0 +1,117 @@
+:root {
+    --grayblue: hsl(220, 15%, 55%);
+    --white: hsl(0, 0%, 100%);
+    --light-gray: hsl(212, 45%, 89%);
+    --dark-blue: hsl(218, 44%, 22%);
+
+
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 15px;
+    font-family: 'Outfit', sans-serif;
+
+}
+
+body {
+    background-color: var(--light-gray);
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#card {
+    width: 340px;
+    height: 520px;
+    background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+    box-shadow: hsla(220, 15%, 55%, .3) 0px 8px 18px;
+
+}
+
+.qr-text {
+    width: 290px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.card-title {
+    margin-bottom: 16px;
+    font-size: 1.5em;
+    font-weight: 700;
+    text-align: center;
+    color: var(--dark-blue);
+}
+
+.card-content {
+    width: 250px;
+    text-align: center;
+    color: var(--grayblue);
+    font-weight: 400;
+}
+
+#qr-img {
+    width: 300px;
+    border-radius: 10px;
+    border: var(--grayblue) 1px solid;
+    margin-top: 20px;
+    margin-bottom: 25px;
+}
+
+
+@media only screen and (max-width:375px) {
+
+    .container {
+        width: 375px;
+    }
+
+
+    #card {
+        width: 320px;
+        height: 500px;
+    }
+
+    .qr-text {
+        width: 260px;
+
+    }
+
+    .card-title {
+        margin-bottom: 14px;
+        font-size: 1.4em;
+
+    }
+
+    .card-content {
+        width: 240px;
+    }
+
+    #qr-img {
+        width: 280px;
+        margin-top: 20px;
+        margin-bottom: 25px;
+    }
+
+    body {
+        overflow-x: hidden;
+    }
+}
+
+@viewport {
+    width: device-width;
+    zoom: 1.0;
+}
