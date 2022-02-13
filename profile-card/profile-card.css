@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;   
+}
+
+:root {
+  --dark-cyan: hsl(185, 75%, 39%);
+  --dull-blue: hsl(229, 23%, 23%);
+  --gray-blue: hsl(227, 10%, 46%);
+  --dark-gray: hsl(0, 0%, 59%);
+  font: 18px/1.5;
+  font-family: 'Kumbh Sans', sans-serif;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background: url(images/bg-pattern-top.svg) bottom 50vh right 50vw no-repeat, 
+              url(images/bg-pattern-bottom.svg) top 50vh left 50vw no-repeat,
+              var(--dark-cyan);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.card {
+  max-width: 400px;
+  background-color: white;
+  box-shadow:hsla(229, 23%, 23%, 0.2) 0px 8px 24px 10px;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  margin-bottom: 24px;
+}
+
+.card-bg {
+  width: 100%;
+  border-radius: 18px 18px 0 0;
+}
+
+.card .pic {
+  position: absolute;
+  margin-top: 90px;
+  border-radius: 50%;
+  border: 5px white solid;
+}
+
+.profile-header {
+  width: 100%;
+  padding-top: 70px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.name, .social-stats {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+  justify-content: space-around;
+  margin-bottom: 8px;
+}
+
+.name h1, .numbers {
+  color: var(--dull-blue);
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.social-stats {
+  width: 100%;
+  border-top: 1px solid var(--dark-gray);
+  padding: 30px 24px 16px 24px;
+}
+
+.social-stats div {
+  padding: 0 15px 0 15px;
+}
+
+.name p, .stat-name, .city {
+  color: var(--gray-blue);
+}
+
+.name h1 {
+  padding-right: 16px;
+}
+
+.name p {
+  font-size: 1.2rem;
+}
+
+.numbers {
+  letter-spacing: 0.04em;
+}
+
+.stat-name {
+  line-height: 1.5em;
+  letter-spacing: 0.1em;
+  font-weight: 400;
+  font-size: 0.8em;
+}
+
+footer {
+  padding: 15px 15px;
+}
+
+@media screen and (min-width: 600px){
+
+  .profile-header {
+    width: 400px;
+  }
+
+}
+
+@media screen and (min-width: 375px) and (max-width: 600px){
+
+  .card {
+    max-width: 335px;
+  }
+
+}
